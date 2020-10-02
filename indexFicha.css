@@ -1,0 +1,120 @@
+:root {
+  --border-size: 0.125rem;
+  --duration: 250ms;
+  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --font-family: monospace;
+  --color-primary: white;
+  --color-secondary: black;
+  --color-tertiary: dodgerblue;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --space: 15px;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: #1d1d1d;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    align-items: center;
+}
+
+body .title{
+    text-align: center;
+    font-size: 25px;
+    text-shadow: -2px 2px #001eff, 2px -2px #ff008d;
+}
+
+body .main{
+    display: flex;
+    flex-direction: row;
+        flex-wrap: wrap;
+    justify-content: left;
+    text-align: left;
+}
+
+.multi-button {
+  display: flex;
+  width: 100%;
+  box-shadow: var(--shadow) 4px 4px;
+  padding-top: 20px;
+}
+
+.multi-button button {
+  flex-grow: 1;
+  cursor: pointer;
+  position: relative;
+  padding:
+    calc(var(--space) / 1.125)
+    var(--space)
+    var(--space);
+  border: var(--border-size) solid black;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  font-size: 1.5rem;
+  font-family: var(--font-family);
+  text-transform: lowercase;
+  text-shadow: var(--shadow) 2px 2px;
+  transition: flex-grow var(--duration) var(--ease);
+}
+
+.multi-button button + button {
+  border-left: var(--border-size) solid black;
+  margin-left: calc(var(--border-size) * -1);
+}
+
+.multi-button button:hover,
+.multi-button button:focus {
+  flex-grow: 2;
+  color: white;
+  outline: none;
+  text-shadow: none;
+  background-color: var(--color-secondary);
+}
+
+.multi-button button:focus {
+  outline: var(--border-size) dashed var(--color-primary);
+  outline-offset: calc(var(--border-size) * -3);
+}
+
+.multi-button:hover button:focus:not(:hover) {
+  flex-grow: 1;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  outline-color: var(--color-tertiary);
+}
+
+.multi-button button:active {
+  transform: translateY(var(--border-size));
+}
+
+body .main .container{
+    margin-left: 20px;
+}
+
+body .main .container .principal{
+    border: 2px solid black;
+    padding-right: 25px;
+}
+
+body .main .container p{
+  margin-left: 5px;
+}
+
+body .main .container .status{
+    border: 2px solid black;
+    padding-right: 25px;
+}
+
+body .footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #1d1d1d;
+    color: white;
+    text-align: center;
+}

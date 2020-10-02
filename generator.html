@@ -1,0 +1,52 @@
+<html lang="pt-bt">
+    <head>
+        <script src="./randomize.js"></script>
+        <link rel="stylesheet" href="./indexFicha.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rat RPG</title>
+    </head>
+    <body onload="randomPerson()">
+        <div class="title">
+            <h1>RAT RPG</h1>
+        </div>
+        <div class="main">
+            <!--
+                variaveis
+            var genero
+            var alinhamento
+            var raca
+            var classe
+            var forc, dex, int, wis, con, cha
+            -->
+            <div class="container">
+                <h1>Principal</h1>
+                <div class="principal">
+                    <p id="gen">Genero:</p>
+                    <p id="ali">Alinhamento:</p>
+                    <p id="rac">Raça:</p>
+                    <p id="cla">Classe:</p>
+                </div>
+                <br>
+                <h1>Status</h1>
+                <div class="status">
+                    <p id="f">Força:</p>
+                    <p id="d">Destreza:</p>
+                    <p id="i">Inteligência:</p>
+                    <p id="s">Sabedoria:</p>
+                    <p id="co">Constituição:</p>
+                    <p id="ch">Carisma:</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Criado por: Jeverton</p>
+            <div class="multi-button">
+                <button onclick=randomPerson()>novo</button>
+                <button onclick=jsonCreate()>json</button>
+                <button>download</button>
+              </div>
+        </div>
+    </body>
+</html>
